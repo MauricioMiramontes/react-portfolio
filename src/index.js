@@ -24,6 +24,7 @@ import "assets/scss/blk-design-system-react.scss?v=1.2.0";
 import "assets/demo/demo.css";
 
 import Index from "views/Index.js";
+import Inicio from "views/Inicio.js";
 import LandingPage from "views/examples/LandingPage.js";
 import RegisterPage from "views/examples/RegisterPage.js";
 import ProfilePage from "views/examples/ProfilePage.js";
@@ -44,7 +45,8 @@ ReactDOM.render(
         path="/profile-page"
         render={(props) => <ProfilePage {...props} />}
       />
-      <Redirect from="/" to="/components" />
+      <Route path="/inicio" render={(props) => <Inicio {...props} />} />
+      <Redirect from="/" to="/inicio" />
     </Switch>
   </BrowserRouter>,
   document.getElementById("root")
