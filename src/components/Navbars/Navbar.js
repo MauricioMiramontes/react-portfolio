@@ -170,6 +170,7 @@ function NavbarComp(props) {
                   nav
                   onClick={(e) => e.preventDefault()}
                 >
+                  <i class="fas fa-globe"></i>
                   es
                 </DropdownToggle>
                 <DropdownMenu className="dropdown-with-icons">
