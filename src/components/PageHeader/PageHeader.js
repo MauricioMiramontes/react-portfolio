@@ -26,15 +26,15 @@ function PageHeader(props) {
                 Muricio Andrés Miramontes Ramírez <br />
               </h1>
               {props.lenguage === "es" ?
-                <p className="text-white mb-3">
+                <h3 className="text-white mb-3">
                   Ingeniero en Computación <br />
                   Desarrollador Full Stack
-                </p>
+                </h3>
                 :
-                <p className="text-white mb-3">
+                <h3 className="text-white mb-3">
                   Computer Engineer <br />
                   Full Stack Developer
-                </p>
+                </h3>
               }
             </Col>
             <Col lg="4" md="5">

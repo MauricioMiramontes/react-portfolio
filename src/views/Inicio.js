@@ -36,7 +36,7 @@ function Inicio() {
       <NavbarComp lenguage={lenguage} changeLenguage={(e) => setLenguage(e)} />
       <div className="wrapper index-page">
         <PageHeader lenguage={lenguage} />
-        <section className="section">
+        <section className="section section-lg">
           <img
             alt="..."
             className="path"
@@ -47,24 +47,118 @@ function Inicio() {
               <Col md="12">
                 <div className="pl-md-5">
                   <h1>
-                    {lenguage === "es" ? <p>¿Quien soy?</p> : <p>Who am I?</p>}
+                    {lenguage === "es" ? <>¿Quien soy?</> : <>Who am I?</>}
                   </h1>
                   {lenguage === "es" ?
-                    <p>
+                    <h4>
                       Ingeniero en computación con un año de experiencia
                       como desarrollador Full Stack. <br />
                       Amante de la tecnología, la programación, el desarrollo y los videojuegos. <br />
                       Comprometido a seguir aprendiendo para mejorar mis habilidades y poder brindar las mejores soluciones.<br />
-                    </p>
+                    </h4>
                     :
-                    <p>
+                    <h4>
                       Computer engineer with one year of experience
                       as a Full Stack developer  <br />
                       with a love for technology, programming, development and video games.  <br />
                       Committed to continue learning to improve my skills and be able to provide the best solutions.<br />
-                    </p>
+                    </h4>
                   }
                 </div>
+              </Col>
+            </Row>
+          </Container>
+        </section>
+        <section className="section section-coins">
+          <img
+            alt="..."
+            className="path"
+            src={require("assets/img/path3.png").default}
+          />
+          <Container>
+            <Row className="row-grid justify-content-between">
+              <Col md="12">
+                <h1>
+                  {lenguage === "es" ? <>¿Que es lo que conozco?</> : <>What do I know?</>}
+                </h1>
+              </Col>
+            </Row>
+            <Row>
+              <Col md="4">
+                <Card className="card-coin card-plain">
+                  <CardHeader>
+                    <img
+                      alt="..."
+                      className="img-center img-fluid"
+                      src={require("assets/img/bitcoin.png").default}
+                    />
+                  </CardHeader>
+                  <CardBody>
+                    <Row>
+                      <Col className="text-center" md="12">
+                        <h3 className="text-uppercase">JavaScript</h3>
+                      </Col>
+                    </Row>
+                    <Row>
+                      <ListGroup>
+                        <ListGroupItem><h4><i className="fab fa-node-js"/>{" "}NodeJS</h4></ListGroupItem>
+                        <ListGroupItem><h4><i className="fab fa-react"/>{" "}Rect</h4></ListGroupItem>
+                        <ListGroupItem><h4><i className="fab fa-react"/>{" "}Redux / Redux Persist</h4></ListGroupItem>
+                        <ListGroupItem><h4><i className="fas fa-server"/>{" "}Express</h4></ListGroupItem>
+                        <ListGroupItem><h4><i className="fas fa-cubes"/>{" "}ThreeJS</h4></ListGroupItem>
+                      </ListGroup>
+                    </Row>
+                  </CardBody>
+                </Card>
+              </Col>
+              <Col md="4">
+                <Card className="card-coin card-plain">
+                  <CardHeader>
+                    <img
+                      alt="..."
+                      className="img-center img-fluid"
+                      src={require("assets/img/etherum.png").default}
+                    />
+                  </CardHeader>
+                  <CardBody>
+                    <Row>
+                      <Col className="text-center" md="12">
+                        <h3 className="text-uppercase">HTML</h3>
+                      </Col>
+                    </Row>
+                    <Row>
+                      <ListGroup>
+                        <ListGroupItem><h4><i className="fab fa-html5"></i>{" "}HTML5</h4></ListGroupItem>
+                        <ListGroupItem><h4><i className="fab fa-bootstrap"></i>{" "}Bootstrap</h4></ListGroupItem>
+                        <ListGroupItem><h4><i className="fab fa-css3-alt"></i>{" "}CSS3</h4></ListGroupItem>
+                        <ListGroupItem><h4><i className="fab fa-sass"></i>{" "}SASS</h4></ListGroupItem>
+                      </ListGroup>
+                    </Row>
+                  </CardBody>
+                </Card>
+              </Col>
+              <Col md="4">
+                <Card className="card-coin card-plain">
+                  <CardHeader>
+                    <img
+                      alt="..."
+                      className="img-center img-fluid"
+                      src={require("assets/img/ripp.png").default}
+                    />
+                  </CardHeader>
+                  <CardBody>
+                    <Row>
+                      <Col className="text-center" md="12">
+                        <h3 className="text-uppercase">Python</h3>
+                      </Col>
+                    </Row>
+                    <Row>
+                      <ListGroup>
+                        <ListGroupItem><h4><i className="fas fa-server"/>{" "}Django</h4></ListGroupItem>
+                      </ListGroup>
+                    </Row>
+                  </CardBody>
+                </Card>
               </Col>
             </Row>
           </Container>
