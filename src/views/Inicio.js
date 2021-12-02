@@ -90,7 +90,8 @@ function Inicio() {
                     <img
                       alt="..."
                       className="img-center img-fluid"
-                      src={require("assets/img/bitcoin.png").default}
+                      style={{ width: "120px", height: "150px" }}
+                      src={require("assets/img/javascript.png").default}
                     />
                   </CardHeader>
                   <CardBody>
@@ -117,7 +118,8 @@ function Inicio() {
                     <img
                       alt="..."
                       className="img-center img-fluid"
-                      src={require("assets/img/etherum.png").default}
+                      style={{ width: "150px", height: "150px" }}
+                      src={require("assets/img/html.png").default}
                     />
                   </CardHeader>
                   <CardBody>
@@ -143,7 +145,8 @@ function Inicio() {
                     <img
                       alt="..."
                       className="img-center img-fluid"
-                      src={require("assets/img/ripp.png").default}
+                      style={{ width: "150px", height: "150px" }}
+                      src={require("assets/img/python.png").default}
                     />
                   </CardHeader>
                   <CardBody>
