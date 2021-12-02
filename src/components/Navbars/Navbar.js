@@ -103,6 +103,30 @@ function NavbarComp(props) {
               </Row>
             </div>
             <Nav navbar>
+              <NavItem>
+                <NavLink
+                  tag={Link}
+                  to="/inicio"
+                >
+                  <p>Resumen</p>
+                </NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink
+                  tag={Link}
+                  to="/timeline"
+                >
+                  <p>Linea de tiempo</p>
+                </NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink
+                  tag={Link}
+                  to="/contacto"
+                >
+                  <p>Contacto</p>
+                </NavLink>
+              </NavItem>
               <NavItem className="p-0">
                 <NavLink
                   data-placement="bottom"
