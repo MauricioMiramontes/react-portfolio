@@ -108,7 +108,7 @@ function NavbarComp(props) {
                   tag={Link}
                   to="/inicio"
                 >
-                  <p>Resumen</p>
+                  {props.lenguage === "es" ? <p>Resumen</p> : <p>Resume</p>}
                 </NavLink>
               </NavItem>
               <NavItem>
@@ -116,7 +116,7 @@ function NavbarComp(props) {
                   tag={Link}
                   to="/timeline"
                 >
-                  <p>Linea de tiempo</p>
+                  {props.lenguage === "es" ? <p>Linea de tiempo</p> : <p>My Timeline</p>}
                 </NavLink>
               </NavItem>
               <NavItem>
@@ -124,7 +124,7 @@ function NavbarComp(props) {
                   tag={Link}
                   to="/contacto"
                 >
-                  <p>Contacto</p>
+                  {props.lenguage === "es" ? <p>Contacto</p> : <p>Contact</p>}
                 </NavLink>
               </NavItem>
               <NavItem className="p-0">
@@ -133,7 +133,7 @@ function NavbarComp(props) {
                   href="https://github.com/MauricioMiramontes"
                   rel="noopener noreferrer"
                   target="_blank"
-                  title="Visita mi Github"
+                  title="Github"
                 >
                   <i className="fab fa-github-square" />
                   <p className="d-lg-none d-xl-none">Github</p>
@@ -145,7 +145,7 @@ function NavbarComp(props) {
                   href="https://www.linkedin.com/in/mauricio-miramontes-ram%C3%ADrez-b2b6b91a0/"
                   rel="noopener noreferrer"
                   target="_blank"
-                  title="Visita mi Linkedin"
+                  title="Linkedin"
                 >
                   <i className="fab fa-linkedin" />
                   <p className="d-lg-none d-xl-none">LinkedIn</p>
@@ -158,7 +158,16 @@ function NavbarComp(props) {
                   target="_blank"
                   href="https://github.com/MauricioMiramontes/react-portfolio"
                 >
-                  <i className="fab fa-github" /> Codigo Fuente
+                  <i className="fab fa-github" />
+                  {props.lenguage === "es" ?
+                    <>
+                      Codigo Fuente
+                    </>
+                    :
+                    <>
+                      Source Code
+                    </>
+                  }
                 </Button>
               </NavItem>
               <UncontrolledDropdown nav>
@@ -171,7 +180,7 @@ function NavbarComp(props) {
                   onClick={(e) => e.preventDefault()}
                 >
                   <i className="fas fa-globe"></i>
-                  es
+                  {props.lenguage}
                 </DropdownToggle>
                 <DropdownMenu className="dropdown-with-icons">
                   <DropdownItem
@@ -179,7 +188,7 @@ function NavbarComp(props) {
                     to=""
                     onClick={(e) => {
                       e.preventDefault();
-                      console.log(props.lenguage);
+                      props.changeLenguage("en");
                     }}>
                     English
                   </DropdownItem>
@@ -188,7 +197,7 @@ function NavbarComp(props) {
                     to=""
                     onClick={(e) => {
                       e.preventDefault();
-                      console.log("Idioma Español")
+                      props.changeLenguage("es");
                     }}>
                     Español
                   </DropdownItem>

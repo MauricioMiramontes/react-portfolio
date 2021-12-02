@@ -8,6 +8,7 @@ import {
 } from "reactstrap";
 
 function PageHeader(props) {
+
   return (
     <div className="page-header header-filter">
       <div className="squares square1" />
@@ -24,10 +25,17 @@ function PageHeader(props) {
               <h1 className="text-white">
                 Muricio Andrés Miramontes Ramírez <br />
               </h1>
-              <p className="text-white mb-3">
-                Ingeniero en Computación <br />
-                Desarrollador Full Stack
-              </p>
+              {props.lenguage === "es" ?
+                <p className="text-white mb-3">
+                  Ingeniero en Computación <br />
+                  Desarrollador Full Stack
+                </p>
+                :
+                <p className="text-white mb-3">
+                  Computer Engineer <br />
+                  Full Stack Developer
+                </p>
+              }
             </Col>
             <Col lg="4" md="5">
               <img
