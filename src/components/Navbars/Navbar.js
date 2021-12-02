@@ -170,7 +170,7 @@ function NavbarComp(props) {
                   nav
                   onClick={(e) => e.preventDefault()}
                 >
-                  <i class="fas fa-globe"></i>
+                  <i className="fas fa-globe"></i>
                   es
                 </DropdownToggle>
                 <DropdownMenu className="dropdown-with-icons">
@@ -179,7 +179,7 @@ function NavbarComp(props) {
                     to=""
                     onClick={(e) => {
                       e.preventDefault();
-                      console.log("Idioma Ingles")
+                      console.log(props.lenguage);
                     }}>
                     English
                   </DropdownItem>

@@ -1,26 +1,13 @@
-/*!
-
-=========================================================
-* BLK Design System React - v1.2.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/blk-design-system-react
-* Copyright 2020 Creative Tim (https://www.creative-tim.com)
-* Licensed under MIT (https://github.com/creativetimofficial/blk-design-system-react/blob/main/LICENSE.md)
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
 import React from "react";
 
 // reactstrap components
-import { Container } from "reactstrap";
+import {
+  Container,
+  Row,
+  Col,
+} from "reactstrap";
 
-export default function PageHeader() {
+function PageHeader(props) {
   return (
     <div className="page-header header-filter">
       <div className="squares square1" />
@@ -31,14 +18,30 @@ export default function PageHeader() {
       <div className="squares square6" />
       <div className="squares square7" />
       <Container>
-        <div className="content-center brand">
-          <h1 className="h1-seo">BLK• React</h1>
-          <h3 className="d-none d-sm-block">
-            A beautiful Design System for Bootstrap 4 (reactstrap) and React.
-            It's Free and Open Source.
-          </h3>
+        <div className="content-center">
+          <Row className="row-grid justify-content-between align-items-center text-left">
+            <Col lg="6" md="6">
+              <h1 className="text-white">
+                Muricio Andrés Miramontes Ramírez <br />
+              </h1>
+              <p className="text-white mb-3">
+                Ingeniero en Computación <br />
+                Desarrollador Full Stack
+              </p>
+            </Col>
+            <Col lg="4" md="5">
+              <img
+                alt="perfil"
+                className="img-fluid rounded-circle shadow-lg"
+                src={require("assets/img/foto_perfil.jpg").default}
+                style={{ width: "250px", height: "250px" }}
+              />
+            </Col>
+          </Row>
         </div>
       </Container>
     </div>
   );
 }
+
+export default PageHeader;
