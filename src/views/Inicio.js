@@ -1,6 +1,7 @@
 import React from "react";
 import NavbarComp from "components/Navbars/Navbar";
 import PageHeader from "components/PageHeader/PageHeader";
+import Footer from "components/Footer/Footer";
 
 // reactstrap components
 import {
@@ -99,11 +100,20 @@ function Inicio() {
                     </Row>
                     <Row>
                       <ListGroup>
-                        <ListGroupItem><h4><i className="fab fa-node-js"/>{" "}NodeJS</h4></ListGroupItem>
-                        <ListGroupItem><h4><i className="fab fa-react"/>{" "}Rect</h4></ListGroupItem>
-                        <ListGroupItem><h4><i className="fab fa-react"/>{" "}Redux / Redux Persist</h4></ListGroupItem>
-                        <ListGroupItem><h4><i className="fas fa-server"/>{" "}Express</h4></ListGroupItem>
-                        <ListGroupItem><h4><i className="fas fa-cubes"/>{" "}ThreeJS</h4></ListGroupItem>
+                        <ListGroupItem><h4><i className="fab fa-node-js" />{" "}NodeJS</h4></ListGroupItem>
+                        <ListGroupItem><h4><i className="fab fa-react" />{" "}Rect</h4></ListGroupItem>
+                        <ListGroupItem><h4><i className="fab fa-react" />{" "}Redux / Redux Persist</h4></ListGroupItem>
+                        <ListGroupItem><h4><i className="fas fa-server" />{" "}Express</h4></ListGroupItem>
+                        <ListGroupItem><h4><i className="fas fa-cubes" />{" "}ThreeJS</h4></ListGroupItem>
+                        <ListGroupItem>
+                          <p className="text-danger">
+                            {lenguage === "es" ? <>En progreso</> : <>In progress</>}
+                          </p>
+                          <h4>
+                            <i className="fas fa-network-wired" />{" "}
+                            Web3
+                          </h4>
+                        </ListGroupItem>
                       </ListGroup>
                     </Row>
                   </CardBody>
@@ -154,7 +164,69 @@ function Inicio() {
                     </Row>
                     <Row>
                       <ListGroup>
-                        <ListGroupItem><h4><i className="fas fa-server"/>{" "}Django</h4></ListGroupItem>
+                        <ListGroupItem><h4><i className="fas fa-server" />{" "}Django</h4></ListGroupItem>
+                      </ListGroup>
+                    </Row>
+                  </CardBody>
+                </Card>
+              </Col>
+            </Row>
+            <Row className="mt-3">
+              <Col md="6" className="mt-5">
+                <Card className="card-coin card-plain">
+                  <CardHeader>
+                    <img
+                      alt="..."
+                      className="img-center img-fluid"
+                      style={{ width: "120px", height: "150px" }}
+                      src={require("assets/img/javascript.png").default}
+                    />
+                  </CardHeader>
+                  <CardBody>
+                    <Row>
+                      <Col className="text-center" md="12">
+                        {lenguage === "es" ?
+                          <h3 className="text-uppercase">Bases de datos</h3>
+                          :
+                          <h3 className="text-uppercase">Databases</h3>
+                        }
+                      </Col>
+                    </Row>
+                    <Row>
+                      <ListGroup>
+                        <ListGroupItem><h4>{" "}SQL / MySQL</h4></ListGroupItem>
+                        <ListGroupItem><h4>{" "}SQL / SQLite</h4></ListGroupItem>
+                        <ListGroupItem><h4>{" "}SQL / PostgreSQL</h4></ListGroupItem>
+                        <ListGroupItem><h4>{" "}NoSQL / MongoDB</h4></ListGroupItem>
+                      </ListGroup>
+                    </Row>
+                  </CardBody>
+                </Card>
+              </Col>
+              <Col md="6" className="mt-5">
+                <Card className="card-coin card-plain">
+                  <CardHeader>
+                    <img
+                      alt="..."
+                      className="img-center img-fluid"
+                      style={{ width: "150px", height: "150px" }}
+                      src={require("assets/img/html.png").default}
+                    />
+                  </CardHeader>
+                  <CardBody>
+                    <Row>
+                      <Col className="text-center" md="12">
+                        <h4 className="text-danger">
+                          {lenguage === "es" ? <>En progreso</> : <>In progress</>}
+                        </h4>
+                        <h3>
+                          C#
+                        </h3>
+                      </Col>
+                    </Row>
+                    <Row>
+                      <ListGroup>
+                        <ListGroupItem><h4><i className="fas fa-server"></i>{" "}ASP.NET</h4></ListGroupItem>
                       </ListGroup>
                     </Row>
                   </CardBody>
@@ -164,6 +236,7 @@ function Inicio() {
           </Container>
         </section>
       </div>
+      <Footer />
     </>
   );
 }
