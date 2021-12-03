@@ -179,7 +179,7 @@ function Inicio() {
                       alt="..."
                       className="img-center img-fluid"
                       style={{ width: "120px", height: "150px" }}
-                      src={require("assets/img/javascript.png").default}
+                      src={require("assets/img/database.png").default}
                     />
                   </CardHeader>
                   <CardBody>
@@ -207,10 +207,10 @@ function Inicio() {
                 <Card className="card-coin card-plain">
                   <CardHeader>
                     <img
-                      alt="..."
+                      alt="c#"
                       className="img-center img-fluid"
                       style={{ width: "150px", height: "150px" }}
-                      src={require("assets/img/html.png").default}
+                      src={require("assets/img/c.png").default}
                     />
                   </CardHeader>
                   <CardBody>
