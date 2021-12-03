@@ -15,12 +15,9 @@ import {
   Col,
 } from "reactstrap";
 
-function Inicio() {
+function Inicio(props) {
 
-  // Variable para determinar el lenguaje de la pagina
-  const [lenguage, setLenguage] = React.useState("es");
-
-  // Funcion para crear un efecto en el heder cuando se entra por primera vez a la pagina
+  // Funcion para crear un efecto en el header cuando se entra por primera vez a la pagina
   React.useEffect(() => {
     document.body.classList.toggle("index-page");
     // Specify how to clean up after this effect:
@@ -31,9 +28,9 @@ function Inicio() {
 
   return (
     <>
-      <NavbarComp lenguage={lenguage} changeLenguage={(e) => setLenguage(e)} />
+      <NavbarComp lenguage={props.lenguage} changeLenguage={props.changeLenguage} />
       <div className="wrapper index-page">
-        <PageHeader lenguage={lenguage} />
+        <PageHeader lenguage={props.lenguage} />
         <section className="section section-lg">
           <img
             alt="..."
@@ -45,9 +42,9 @@ function Inicio() {
               <Col md="12">
                 <div className="pl-md-5">
                   <h1>
-                    {lenguage === "es" ? <>¿Quien soy?</> : <>Who am I?</>}
+                    {props.lenguage === "es" ? <>¿Quien soy?</> : <>Who am I?</>}
                   </h1>
-                  {lenguage === "es" ?
+                  {props.lenguage === "es" ?
                     <h4>
                       Ingeniero en computación con un año de experiencia
                       como desarrollador Full Stack. <br />
@@ -77,7 +74,7 @@ function Inicio() {
             <Row className="row-grid justify-content-between">
               <Col md="12">
                 <h1>
-                  {lenguage === "es" ? <>¿Que es lo que conozco?</> : <>What do I know?</>}
+                  {props.lenguage === "es" ? <>¿Que es lo que conozco?</> : <>What do I know?</>}
                 </h1>
               </Col>
             </Row>
@@ -107,7 +104,7 @@ function Inicio() {
                         <ListGroupItem><h4><i className="fas fa-cubes" />{" "}ThreeJS</h4></ListGroupItem>
                         <ListGroupItem>
                           <p className="text-danger">
-                            {lenguage === "es" ? <>En progreso</> : <>In progress</>}
+                            {props.lenguage === "es" ? <>En progreso</> : <>In progress</>}
                           </p>
                           <h4>
                             <i className="fas fa-network-wired" />{" "}
@@ -185,7 +182,7 @@ function Inicio() {
                   <CardBody>
                     <Row>
                       <Col className="text-center" md="12">
-                        {lenguage === "es" ?
+                        {props.lenguage === "es" ?
                           <h3 className="text-uppercase">Bases de datos</h3>
                           :
                           <h3 className="text-uppercase">Databases</h3>
@@ -217,7 +214,7 @@ function Inicio() {
                     <Row>
                       <Col className="text-center" md="12">
                         <h4 className="text-danger">
-                          {lenguage === "es" ? <>En progreso</> : <>In progress</>}
+                          {props.lenguage === "es" ? <>En progreso</> : <>In progress</>}
                         </h4>
                         <h3>
                           C#
@@ -236,7 +233,7 @@ function Inicio() {
           </Container>
         </section>
       </div>
-      <Footer lenguage = {lenguage}/>
+      <Footer lenguage = {props.lenguage}/>
     </>
   );
 }
