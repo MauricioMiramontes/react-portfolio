@@ -236,7 +236,7 @@ function Inicio() {
           </Container>
         </section>
       </div>
-      <Footer />
+      <Footer lenguage = {lenguage}/>
     </>
   );
 }

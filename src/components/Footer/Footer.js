@@ -1,22 +1,6 @@
-/*!
-
-=========================================================
-* BLK Design System React - v1.2.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/blk-design-system-react
-* Copyright 2020 Creative Tim (https://www.creative-tim.com)
-* Licensed under MIT (https://github.com/creativetimofficial/blk-design-system-react/blob/main/LICENSE.md)
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
 import React from "react";
 import { Link } from "react-router-dom";
+
 // reactstrap components
 import {
   Button,
@@ -29,64 +13,45 @@ import {
   UncontrolledTooltip,
 } from "reactstrap";
 
-export default function Footer() {
+function Footer(props) {
   return (
     <footer className="footer">
       <Container>
         <Row>
-          <Col md="3">
-            <h1 className="title">BLK•</h1>
+          <Col md="4">
+            <h1 className="title">Mauricio Miramontes Portfolio</h1>
           </Col>
           <Col md="3">
             <Nav>
               <NavItem>
                 <NavLink to="/" tag={Link}>
-                  Home
+                  {props.lenguage === "es" ? <>Resumen</> : <>Resume</>}
                 </NavLink>
               </NavItem>
               <NavItem>
                 <NavLink to="/landing-page" tag={Link}>
-                  Landing
+                  {props.lenguage === "es" ? <>Linea de tiempo</> : <>My Timeline</>}
                 </NavLink>
               </NavItem>
               <NavItem>
                 <NavLink to="/register-page" tag={Link}>
-                  Register
-                </NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink to="/profile-page" tag={Link}>
-                  Profile
+                  {props.lenguage === "es" ? <>Contacto</> : <>Contact</>}
                 </NavLink>
               </NavItem>
             </Nav>
           </Col>
-          <Col md="3">
-            <Nav>
-              <NavItem>
-                <NavLink href="https://creative-tim.com/contact-us?ref=blkdsr-footer">
-                  Contact Us
-                </NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href="https://creative-tim.com/about-us?ref=blkdsr-footer">
-                  About Us
-                </NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href="https://creative-tim.com/blog?ref=blkdsr-footer">
-                  Blog
-                </NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href="https://opensource.org/licenses/MIT">
-                  License
-                </NavLink>
-              </NavItem>
-            </Nav>
-          </Col>
-          <Col md="3">
-            <h3 className="title">Follow us:</h3>
+          <Col md="5">
+            {props.lenguage === "es" ?
+              <>
+                <h4 className="title">Estilos y Diseño creados por Creative Tim</h4>
+                <h5 className="title">Contacto Creative Tim:</h5>
+              </>
+              :
+              <>
+                <h4 className="title">Style and Desing created by Creative Tim</h4>
+                <h5 className="title">Contact Creative Tim:</h5>
+              </>
+            }
             <div className="btn-wrapper profile">
               <Button
                 className="btn-icon btn-neutral btn-round btn-simple"
@@ -115,7 +80,7 @@ export default function Footer() {
               <Button
                 className="btn-icon btn-neutral btn-round btn-simple"
                 color="default"
-                href="https://dribbble.com/creativetim"
+                href="https://www.creative-tim.com/"
                 id="tooltip318450378"
                 target="_blank"
               >
@@ -131,3 +96,5 @@ export default function Footer() {
     </footer>
   );
 }
+
+export default Footer
