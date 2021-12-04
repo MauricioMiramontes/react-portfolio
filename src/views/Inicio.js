@@ -169,7 +169,7 @@ function Inicio(props) {
               </Col>
             </Row>
             <Row className="mt-3">
-              <Col md="6" className="mt-5">
+              <Col md="4" className="mt-5">
                 <Card className="card-coin card-plain">
                   <CardHeader>
                     <img
@@ -191,16 +191,47 @@ function Inicio(props) {
                     </Row>
                     <Row>
                       <ListGroup>
-                        <ListGroupItem><h4>{" "}SQL / MySQL</h4></ListGroupItem>
-                        <ListGroupItem><h4>{" "}SQL / SQLite</h4></ListGroupItem>
-                        <ListGroupItem><h4>{" "}SQL / PostgreSQL</h4></ListGroupItem>
-                        <ListGroupItem><h4>{" "}NoSQL / MongoDB</h4></ListGroupItem>
+                        <ListGroupItem><h4>SQL / MySQL</h4></ListGroupItem>
+                        <ListGroupItem><h4>SQL / SQLite</h4></ListGroupItem>
+                        <ListGroupItem><h4>SQL / PostgreSQL</h4></ListGroupItem>
+                        <ListGroupItem><h4>NoSQL / MongoDB</h4></ListGroupItem>
                       </ListGroup>
                     </Row>
                   </CardBody>
                 </Card>
               </Col>
-              <Col md="6" className="mt-5">
+              <Col md="4" className="mt-5">
+                <Card className="card-coin card-plain">
+                  <CardHeader>
+                    <img
+                      alt="..."
+                      className="img-center img-fluid"
+                      style={{ width: "120px", height: "150px" }}
+                      src={require("assets/img/database.png").default}
+                    />
+                  </CardHeader>
+                  <CardBody>
+                    <Row>
+                      <Col className="text-center" md="12">
+                        {props.lenguage === "es" ?
+                          <h3 className="text-uppercase">Extras</h3>
+                          :
+                          <h3 className="text-uppercase">Extras</h3>
+                        }
+                      </Col>
+                    </Row>
+                    <Row>
+                      <ListGroup>
+                        <ListGroupItem><h4><i className="fab fa-aws" />{" "}AWS</h4></ListGroupItem>
+                        <ListGroupItem><h4><i className="fab fa-git" />{" "}Git</h4></ListGroupItem>
+                        <ListGroupItem><h4><i className="fab fa-slack" />{" "}Slack</h4></ListGroupItem>
+                        <ListGroupItem><h4><i className="fas fa-brain" />{" "}Deep Learning / Machine Learning</h4></ListGroupItem>
+                      </ListGroup>
+                    </Row>
+                  </CardBody>
+                </Card>
+              </Col>
+              <Col md="4" className="mt-5">
                 <Card className="card-coin card-plain">
                   <CardHeader>
                     <img
@@ -233,7 +264,7 @@ function Inicio(props) {
           </Container>
         </section>
       </div>
-      <Footer lenguage = {props.lenguage}/>
+      <Footer lenguage={props.lenguage} />
     </>
   );
 }
