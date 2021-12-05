@@ -4,11 +4,6 @@ import React from 'react';
 
 // reactstrap components
 import {
-  Card,
-  CardHeader,
-  CardBody,
-  ListGroupItem,
-  ListGroup,
   Container,
   Row,
   Col,
