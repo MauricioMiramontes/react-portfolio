@@ -207,7 +207,7 @@ function Inicio(props) {
                       alt="..."
                       className="img-center img-fluid"
                       style={{ width: "120px", height: "150px" }}
-                      src={require("assets/img/database.png").default}
+                      src={require("assets/img/computer.png").default}
                     />
                   </CardHeader>
                   <CardBody>
