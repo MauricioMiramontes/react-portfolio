@@ -162,6 +162,7 @@ function Inicio(props) {
                     <Row>
                       <ListGroup>
                         <ListGroupItem><h4><i className="fas fa-server" />{" "}Django</h4></ListGroupItem>
+                        <ListGroupItem><h4><i className="fas fa-brain" />{" "}Deep Learning / Machine Learning</h4></ListGroupItem>
                       </ListGroup>
                     </Row>
                   </CardBody>
@@ -225,7 +226,6 @@ function Inicio(props) {
                         <ListGroupItem><h4><i className="fab fa-aws" />{" "}AWS</h4></ListGroupItem>
                         <ListGroupItem><h4><i className="fab fa-git" />{" "}Git</h4></ListGroupItem>
                         <ListGroupItem><h4><i className="fab fa-slack" />{" "}Slack</h4></ListGroupItem>
-                        <ListGroupItem><h4><i className="fas fa-brain" />{" "}Deep Learning / Machine Learning</h4></ListGroupItem>
                       </ListGroup>
                     </Row>
                   </CardBody>
