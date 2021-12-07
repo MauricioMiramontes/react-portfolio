@@ -43,12 +43,12 @@ function Footer(props) {
           <Col md="5">
             {props.lenguage === "es" ?
               <>
-                <h4 className="title">Estilos y Diseño creados por Creative Tim</h4>
+                <h4 className="title">Estilos y diseño creados por Creative Tim</h4>
                 <h5 className="title">Contacto Creative Tim:</h5>
               </>
               :
               <>
-                <h4 className="title">Style and Desing created by Creative Tim</h4>
+                <h4 className="title">Style and design created by Creative Tim</h4>
                 <h5 className="title">Contact Creative Tim:</h5>
               </>
             }
