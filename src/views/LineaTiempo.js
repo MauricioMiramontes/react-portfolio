@@ -21,8 +21,8 @@ function LineaTiempo(props) {
               <Col lg="12" md="12" className="text-center mt-5">
                 <img
                   alt="perfil"
-                  className="img-fluid rounded-circle shadow-lg"
-                  src={require("assets/img/foto_perfil.jpg").default}
+                  className="img-fluid image"
+                  src={require("assets/img/construction.png").default}
                   style={{ width: "250px", height: "250px" }}
                 />
               </Col>
