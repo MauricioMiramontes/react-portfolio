@@ -1,4 +1,4 @@
-# [Portfolio React Mauricio Mirmontes](https://mauriciomiramontes.github.io/react-portfolio/)
+# [Portfolio React Mauricio Miramontes](https://mauriciomiramontes.github.io/react-portfolio/)
 
 Portfolio/Resume creado en React 
 
