@@ -223,6 +223,7 @@ function Inicio(props) {
                     </Row>
                     <Row>
                       <ListGroup>
+                        <ListGroupItem><h4><i className="fab fa-linux"/>{" "}Linux</h4></ListGroupItem>
                         <ListGroupItem><h4><i className="fab fa-aws" />{" "}AWS</h4></ListGroupItem>
                         <ListGroupItem><h4><i className="fab fa-git" />{" "}Git</h4></ListGroupItem>
                         <ListGroupItem><h4><i className="fab fa-slack" />{" "}Slack</h4></ListGroupItem>
