@@ -114,7 +114,7 @@ function NavbarComp(props) {
               <NavItem>
                 <NavLink
                   tag={Link}
-                  to="/timeline"
+                  to="/linea-tiempo"
                 >
                   {props.lenguage === "es" ? <p>Linea de tiempo</p> : <p>My Timeline</p>}
                 </NavLink>
