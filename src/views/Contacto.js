@@ -15,10 +15,14 @@ function Contacto(props) {
     <>
       <NavbarComp lenguage={props.lenguage} changeLenguage={props.changeLenguage} />
       <div className="wrapper index-page">
-        <section className="section">
+        <section className="section section-pagination">
+          <img
+            alt="..."
+            className="path path1"
+            src={require("assets/img/path4.png").default}
+          />
           <Container>
             <Row>
-            
               <Col md="4">
                 <div className="info ">
                   <div className="icon icon-primary">
@@ -36,18 +40,18 @@ function Contacto(props) {
                   </div>
                 </div>
               </Col>
-              <Col md="4" className = "">
+              <Col md="4" className="">
                 <div className="info ">
                   <div className="icon icon-primary">
                     <i className="tim-icons icon-mobile" />
                   </div>
                   <div className="description">
                     <h3 className="info-title">
-                    {props.lenguage === "es" ? <>Telefono <br/> Whatsapp</> : <>Phone number <br/> Whatsapp</>}
+                      {props.lenguage === "es" ? <>Telefono <br /> Whatsapp</> : <>Phone number <br /> Whatsapp</>}
                     </h3>
                     <h4>
                       +52 5521878873 <br />
-                      {props.lenguage === "es" ? <>Lun - Vier, 9:00 - 20:00</> : <>Mon - Fri, 9:00 - 20:00</>}  
+                      {props.lenguage === "es" ? <>Lun - Vier, 9:00 - 20:00</> : <>Mon - Fri, 9:00 - 20:00</>}
                     </h4>
                   </div>
                 </div>
@@ -66,7 +70,7 @@ function Contacto(props) {
                   </div>
                 </div>
               </Col>
-              
+
             </ Row>
           </Container>
         </section>
